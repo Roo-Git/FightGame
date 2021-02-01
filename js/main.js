@@ -37,3 +37,32 @@ let selectHeroe = (figther) => {
                 document.getElementById(arrayTeamA[i]).style = "visibility : hidden";
             }
     } */
+
+
+class Fighter {
+    
+    constructor (nombre, fuerza, defensa, suerte, malaSuerte) {
+        this.vida = 100;
+        this.nombre = nombre;
+        this.fuerza = fuerza;
+        this.defensa = defensa;
+        this.suerte = suerte;
+        this.malaSuerte = malaSuerte;
+    };
+
+    ataqueNormal (enemigo) {
+        enemigo.vida -= (this.fuerza - enemigo.suerte);
+    };
+
+    ataqueEspecial (enemigo) {
+        enemigo.vida -= (this.fuerza - enemigo.malaSuerte)
+    };
+};
+
+let player1 = new Fighter ("cartman", 40, 50, 0, 40);
+
+let player2 = new Fighter ("stan", 20, 20, 50, 30);
+
+player1.ataqueNormal(player2);
+
+console.log(player2.vida);
