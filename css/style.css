@@ -1,0 +1,25 @@
+.personajes {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4em;
+}
+
+.heroe {
+    margin: 1em;
+    border: solid 0.5em black;
+    border-radius: 1em;
+    height: 20em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    background-color: wheat
+}
+
+.imgPersonaje {
+    width: 100%;   
+}
+
+
+
