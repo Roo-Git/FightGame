@@ -68,27 +68,52 @@
     width: 12em;
 }
 
-#imgHeroeKyle {
-    width: 16em;
+#Cartman {
+    width: 13.5em;
     padding: 1.7em;
     margin-top: 1em;
 }
 
-#imgHeroeStan {
-    width: 9em;
+
+#Stan {
+    width: 9.3em;
+    padding: 1.7em;
+    margin-top: 1em;
 }
 
-#imgHeroeJimmy {
-    width: 10em;
+#Kyle {
+    width: 18em;
+    padding: 1.7em;
+    margin-top: 1em;
 }
+
+#Kenny {
+    width: 14em;
+    padding: 1.7em;
+    margin-top: 1em;
+}
+
+#Butters {
+    width: 13em;
+    padding: 1.7em;
+    margin-top: 1em;
+}
+
+#Jimmy {
+    width: 11em;
+    padding: 1.7em;
+    margin-top: 1em;
+}
+
 
 /* PANTALLA Nº 1  ASIDE - MENSAJE */
 
-.mensajeSeleccionHeroes{
+#mensaje {
     margin: auto;
     width: 98em;
     height: 20em;
     background-color: wheat;
+    border-radius: 1em;
 }
 
 

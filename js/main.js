@@ -30,17 +30,17 @@ class Fighter {
 
 /* Las Propiedades son: nombre, vida, fuerza, defensa y suerte. */
 
-let heroe1 = new Fighter ("Cartman", 101, 0, 0, 0);
+let heroe1 = new Fighter ("Cartman", 100, 10, 10, 10);
 
-let heroe2 = new Fighter ("Stan", 102, 0, 0, 0);
+let heroe2 = new Fighter ("Stan", 100, 10, 10, 10);
 
-let heroe3 = new Fighter ("Kyle", 103, 0, 0, 0);
+let heroe3 = new Fighter ("Kyle", 100, 10, 10, 10);
 
-let heroe4 = new Fighter ("Kenny", 104, 0, 0, 0);
+let heroe4 = new Fighter ("Kenny", 100, 10, 10, 10);
 
-let heroe5 = new Fighter ("Butters", 105, 0, 0, 0);
+let heroe5 = new Fighter ("Butters", 100, 0, 0, 0);
 
-let heroe6 = new Fighter ("Jimmy", 106, 0, 0, 0);
+let heroe6 = new Fighter ("Jimmy", 100, 0, 0, 0);
 
 let p1 = "";
 
@@ -83,24 +83,48 @@ let p2 = "";
     
 };
 
-    /* Función: Selección de Personaje. */ /* FUNCIONA */
+/* Función: Inicio GameFigth. */ /* FUNCIONA */
 
-let selectHeroe = (personaje) => {
+let inicioGame = () => {
+    let vidaInicial = 100;
+
+    heroe1.vida = vidaInicial;
+    heroe2.vida = vidaInicial;
+
+    p1 = "";
+    p2 = "";
+
+
+};
+
+    console.log("Iniciamos el juego y la vida del player 1 es..." + heroe1.vida);
+    console.log("Iniciamos el juego y la vida del player 2 es..." + heroe2.vida);
+
+/* Función: Selección de Personaje. */ /* FUNCIONA */
+
+let selectHero = (personaje) => {
     if(p1 == "") {
         p1 = personaje;
 
-        document.getElementById(personaje).className = "avatar";
+        document.getElementById(personaje).className = "avatar2";
         document.getElementById(personaje).onclick = "";
 
     }else {
         p2 = personaje;
 
-        document.getElementById(personaje).className = "avatar";
+        document.getElementById(personaje).className = "avatar2";
         document.getElementById(personaje).onclick = "";
-    }
+    };
 
     console.log(p1, p2)
-}
+};
+
+/* Función: Mensaje de Selección de Personaje. */ /* EN PROCESO */
+
+let mensaje = document.getElementById("mensaje");
+
+mensaje.innerHTML = `Has escogido al primer personaje que es ${p1} y al segundo que es ${p2}`;
+
 
 
 
