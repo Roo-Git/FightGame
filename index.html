@@ -9,18 +9,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">     
 </head>
 <body>
+    <!-- Header Pantalla Nº 1 -->
+
     <div class="header">
-        <div class="seleccionar">Select Your Hero!</div>
-        <img class="titulo" src="img/titulo.png" alt="Título">
+        <div class="titulo">Select Your Hero!</div>
+        <img class="iconoSouthPark" src="img/titulo.png" alt="Título">
     </div>
-    <div class="personajes">
-        <div class="heroe" id="cartman" onclick="selectHeroe('cartman')"><img class="imgPersonaje" src="img/cartman.png" alt="Cartman"></div>
-        <div class="heroe" id="stan" onclick="selectHeroe('stan')"><img class="imgPersonaje" src="img/stan.png" alt="Stan"></div>
-        <div class="heroe" id="kyle" onclick="selectHeroe('kyle')"><img class="imgPersonaje" src="img/kyle.png" alt="Kyle"></div>
-        <div class="heroe" id="kenny" onclick="selectHeroe('kenny')"><img class="imgPersonaje" src="img/kenny.png" alt="Kenny"></div>
-        <div class="heroe" id="butters" onclick="selectHeroe('butters')"><img class="imgPersonaje" src="img/butters.png" alt="Butters"></div>
-        <div class="heroe" id="jimmy" onclick="selectHeroe('jimmy')"><img class="imgPersonaje" src="img/jimmy.png" alt="Jimmy"></div>
+    
+    <!-- Main Pantalla Nº 1 -->
+
+    <div class="seleccionHeroes">    
+
+        <div class="cartman"><img class="imgHeroe" src="img/cartman.png">CARTMAN</div>
+        <div class="stan"><img class="imgHeroe" id="imgHeroeStan" src="img/stan.png">STAN</div>
+        <div class="kyle"><img class="imgHeroe" id="imgHeroeKyle" src="img/kyle.png">KYLE</div>
+        <div class="kenny"><img class="imgHeroe" src="img/kenny.png">KENNY</div>
+        <div class="butters"><img class="imgHeroe" src="img/butters.png">BUTTERS</div>
+        <div class="jimmy"><img class="imgHeroe" id= "imgHeroeJimmy" src="img/jimmy.png">JIMMY</div>
     </div>
+
+    <!-- ASIDE Pantalla Nº 1 -->
+
+    <div class="mensajeSeleccionHeroes"></div>
+
+    
+
     <script src="/js/main.js"></script>
 </body>
 </html>

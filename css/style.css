@@ -1,26 +1,30 @@
 /* Google Font: Potta One -> https://fonts.google.com/specimen/Potta+One?sidebar.open=true&selection.family=Potta+One */
 
+
+
+/* PANTALLA Nº 1 ''SELECCION DE PERSONAJE'' */
+
+                                /* Header */
+
 .header {
     width: 100%;
     height: 10em;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 3em;
 }
-.seleccionar {
+.titulo {
     display:flex;
     justify-content: center;
     text-align: center;
     align-items: center;
     width: 75%;
-    height: 1em;
     font-size: 8em;
     font-family: 'Potta One', cursive;
     margin-left: 1em;
 }
 
-.titulo {
+.iconoSouthPark {
     display: flex;
     justify-content: flex-end;
     align-self: center;
@@ -33,29 +37,105 @@
 
 }
 
-.personajes {
+/* PANTALLA Nº 1 Main = Seleccion Heroes  */
+
+.seleccionHeroes {
+    width: 10em;
+    height: 25em;
+    margin: auto;
+    margin-top: 2em;
     display: flex;
     flex-direction: row;
-    margin-top: 3em;
+    justify-content: center;
+
 }
 
-.heroe {
-    margin: 1em;
-    padding: 2em;
-    border: solid 0.5em black;
+.cartman, .stan, .kyle, .kenny, .butters, .jimmy{
+    margin: 0.4em;
+    width: 20em;
+    height: 20em;
+    text-align: center;
+    border: black 0.5em solid;
     border-radius: 1em;
-    height: 10em;
+    background-color: wheat;
+    font-size: 1em;
+    font-family: 'Potta One', cursive;
+}
+
+.imgHeroe {
+    padding: 2em;
+    background-size: cover;
+    width: 12em;
+}
+
+#imgHeroeKyle {
+    width: 16em;
+    padding: 1.7em;
+    margin-top: 1em;
+}
+
+#imgHeroeStan {
+    width: 9em;
+}
+
+#imgHeroeJimmy {
+    width: 10em;
+}
+
+/* PANTALLA Nº 1  ASIDE - MENSAJE */
+
+.mensajeSeleccionHeroes{
+    margin: auto;
+    width: 98em;
+    height: 20em;
+    background-color: wheat;
+}
+
+
+
+/*.cartmanNombre, .stanNombre, .kyleNombre, .kennyNombre, .buttersNombre, .jimmyNombre {
+    margin: 3em;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     align-self: center;
-    background-color: wheat;
+    background-color: red;
+    height: 10em;
+    border: solid 0.5em black;
+    border-radius: 1em;  
 }
 
-.imgPersonaje {
-    width: 100%;   
+
+/*.botonPegar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4em;
+    margin-top: 10em;
 }
 
+.attack {
+    height: 5em;
+    width: 5em;
+    background-color: blue;
+    margin: 1em;
+} */
 
 
+/* HTML
+
+    <div class="main">
+        <div onclick="selectHeroe('cartman')" id="cartman"><img class="heroes" class="elegido" src="img/cartman.png" alt="Cartman"></div>
+        <div onclick="selectHeroe('stan')" id="stan"><img class="heroes" class="elegido" src="img/stan.png" alt="Stan"></div>
+        <div onclick="selectHeroe('kyle')" id="kyle" ><img class="heroes" class="elegido" src="img/kyle.png" alt="Kyle"></div>
+        <div onclick="selectHeroe('kenny')" id="kenny"><img class="heroes" class="elegido" src="img/kenny.png" alt="Kenny"></div>
+        <div onclick="selectHeroe('butters')" id="butters"><img class="heroes" class="elegido" src="img/butters.png" alt="Butters"></div>
+        <div onclick="selectHeroe('jimmy')" id="jimmy" ><img class="heroes" class="elegido" src="img/jimmy.png" alt="Jimmy"></div>
+    </div>
+
+    <div class="botonPegar">
+        <div id="strike" class="attack" onclick="atacar()"></div>
+    </div>
+
+*/
