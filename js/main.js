@@ -94,11 +94,11 @@ let inicioGame = () => {
     p1 = "";
     p2 = "";
 
-
 };
 
-    console.log("Iniciamos el juego y la vida del player 1 es..." + heroe1.vida);
-    console.log("Iniciamos el juego y la vida del player 2 es..." + heroe2.vida);
+console.log("Iniciamos el juego y la vida del player 1 es..." + heroe1.vida);
+console.log("Iniciamos el juego y la vida del player 2 es..." + heroe2.vida);
+
 
 /* Función: Selección de Personaje. */ /* FUNCIONA */
 
@@ -106,27 +106,29 @@ let selectHero = (personaje) => {
     if(p1 == "") {
         p1 = personaje;
 
-        document.getElementById(personaje).className = "avatar2";
+        document.getElementById(personaje).className = "Elegido";
         document.getElementById(personaje).onclick = "";
 
     }else {
         p2 = personaje;
 
-        document.getElementById(personaje).className = "avatar2";
+        document.getElementById(personaje).className = "Elegido";
         document.getElementById(personaje).onclick = "";
     };
 
-    console.log(p1, p2)
+    console.log(`El jugador uno ha escogido a ${p1}`)
+    console.log(`El jugador dos ha escogido a ${p2}`)
+
+
+
+    /* Función: Mensaje de Selección de Personaje. */ /* FUNCIONA */
+
+    let mensaje = document.getElementById("mensaje");
+
+    mensaje.innerHTML = `Has escogido al primer personaje que es ${p1} y al segundo que es ${p2}`;
+
+
 };
-
-/* Función: Mensaje de Selección de Personaje. */ /* EN PROCESO */
-
-let mensaje = document.getElementById("mensaje");
-
-mensaje.innerHTML = `Has escogido al primer personaje que es ${p1} y al segundo que es ${p2}`;
-
-
-
 
 
 
