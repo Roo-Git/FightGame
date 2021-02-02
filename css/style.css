@@ -105,6 +105,12 @@
     margin-top: 1em;
 }
 
+.elegido {                              /* Función: Selección de Personaje */
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+
 
 /* PANTALLA Nº 1  ASIDE - MENSAJE */
 

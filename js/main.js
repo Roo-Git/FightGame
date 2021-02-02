@@ -106,13 +106,13 @@ let selectHero = (personaje) => {
     if(p1 == "") {
         p1 = personaje;
 
-        document.getElementById(personaje).className = "Elegido";
+        document.getElementById(personaje).className = "elegido";
         document.getElementById(personaje).onclick = "";
 
     }else {
         p2 = personaje;
 
-        document.getElementById(personaje).className = "Elegido";
+        document.getElementById(personaje).className = "elegido";
         document.getElementById(personaje).onclick = "";
     };
 
@@ -121,7 +121,7 @@ let selectHero = (personaje) => {
 
 
 
-    /* Función: Mensaje de Selección de Personaje. */ /* FUNCIONA */
+    /* sub-Función: Mensaje de Selección de Personaje. */ /* FUNCIONA */
 
     let mensaje = document.getElementById("mensaje");
 
