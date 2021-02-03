@@ -9,34 +9,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">     
 </head>
 <body>
-    <!-- Header Pantalla Nº 1 -->
+    <div class="master"> <!-- Div padre del proyecto -->
 
-    <div class="header">
-        <div class="titulo">Select Your Heroes!</div>
-        <img class="iconoSouthPark" src="img/titulo.png" alt="Título">
+        <!-- Header Pantalla Nº 0: # -->
+
+        <div id="fase0" class="pantalla0" style="display: block">
+        <div>
+            <p>prueba</p>
+        </div>
     </div>
+
+        <!-- Header Pantalla Nº 1: Contiene el título y el icono de South Park -->
+
+        <div id="fase1" class="pantalla1" style="display: none">         
+            <div class="header">
+                <div class="titulo">Select Your Heroes!</div>
+                <img class="iconoSouthPark" src="img/titulo.png" alt="Título">
+            </div>
     
-    <!-- Main Pantalla Nº 1 -->
+            <!-- Main Pantalla Nº 1: Contiene la selección de personajes -->
 
-    <div class="seleccionHeroes">    
+            <div class="seleccionHeroes">    
 
-        <div onclick= "selectHero('Cartman')" class="cartman"><img class="imgHeroe" id="Cartman" src="img/cartman.png">CARTMAN</div>
-        <div onclick= "selectHero('Stan')" class="stan"><img class="imgHeroe" id="Stan" src="img/stan.png">STAN</div>
-        <div onclick= "selectHero('Kyle')" class="kyle"><img class="imgHeroe" id="Kyle" src="img/kyle.png">KYLE</div>
-        <div onclick= "selectHero('Kenny')" class="kenny"><img class="imgHeroe" id="Kenny" src="img/kenny.png">KENNY</div>
-        <div onclick= "selectHero('Butters')" class="butters"><img class="imgHeroe" id="Butters" src="img/butters.png">BUTTERS</div>
-        <div onclick= "selectHero('Jimmy')" class="jimmy"><img class="imgHeroe" id="Jimmy" src="img/jimmy.png">JIMMY</div>
-    </div>
+                <div onclick= "selectHero('Cartman')" class="cartman"><img class="imgHeroe" id="Cartman" src="img/cartman.png">CARTMAN</div>
+                <div onclick= "selectHero('Stan')" class="stan"><img class="imgHeroe" id="Stan" src="img/stan.png">STAN</div>
+                <div onclick= "selectHero('Kyle')" class="kyle"><img class="imgHeroe" id="Kyle" src="img/kyle.png">KYLE</div>
+                <div onclick= "selectHero('Kenny')" class="kenny"><img class="imgHeroe" id="Kenny" src="img/kenny.png">KENNY</div>
+                <div onclick= "selectHero('Butters')" class="butters"><img class="imgHeroe" id="Butters" src="img/butters.png">BUTTERS</div>
+                <div onclick= "selectHero('Jimmy')" class="jimmy"><img class="imgHeroe" id="Jimmy" src="img/jimmy.png">JIMMY</div>
+            </div>
 
-    <!-- ASIDE Pantalla Nº 1 -->
-    <div class="aside">
-        <div class="containerRandy">
-            <img class="randy" id="Randy" src="img/randy.png">
-        </div> 
-        <div id="mensaje"></div>
+            <!-- ASIDE Pantalla Nº 1: Contiene La imagen del narrador y el mensaje de texto de JS -->
 
-    </div>
+            <div class="aside">
+                <div class="containerRandy">
+                    <img class="randy" id="Randy" src="img/randy.png">
+                </div> 
+                <div id="mensaje"></div>
 
+            </div>
+        </div>
     
 
     <script src="/js/main.js"></script>

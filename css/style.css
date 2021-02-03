@@ -5,6 +5,18 @@
 /* PANTALLA Nº 1 ''SELECCION DE PERSONAJE'' */
 
                                 /* Header */
+.general{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pantalla0 {
+    width: 10em;
+    height: 10em;
+    background-color: black;
+}
+
 
 .header {
     width: 100%;

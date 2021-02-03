@@ -38,9 +38,9 @@ let heroe3 = new Fighter ("Kyle", 100, 10, 10, 10);
 
 let heroe4 = new Fighter ("Kenny", 100, 10, 10, 10);
 
-let heroe5 = new Fighter ("Butters", 100, 0, 0, 0);
+let heroe5 = new Fighter ("Butters", 100, 10, 10, 10);
 
-let heroe6 = new Fighter ("Jimmy", 100, 0, 0, 0);
+let heroe6 = new Fighter ("Jimmy", 100, 10, 10, 10);
 
 let p1 = "";
 
@@ -99,6 +99,21 @@ let inicioGame = () => {
 console.log("Iniciamos el juego y la vida del player 1 es..." + heroe1.vida);
 console.log("Iniciamos el juego y la vida del player 2 es..." + heroe2.vida);
 
+/* Función: Cambiar de Pantalla: */
+
+let cambiarPantalla = (faseAhora, faseFutura) => {
+    let pantallaActual = document.getElementById(faseAhora);
+    pantallaDestino = document.getElementById(faseFutura);
+
+   
+
+    // Procedemos al cambio del pantalla //
+
+    pantallaActual.style.display = "none";
+    pantallaDestino.style.display = "block";
+
+};
+
 
 /* Función: Selección de Personaje. */ /* REVISAR!!! NO FUNCIONA */
 
@@ -129,6 +144,17 @@ let selectHero = (personaje) => {
 
 
 };
+
+/* PROMESA: Delay (Tiene que estar arriba de: FUNCION: Tiempo de Delay) */ 
+
+const resolveIn = delay =>
+new Promise (res => setTimeout(() => res(delay), delay));
+
+/* Funcion: Tiempo de Delay Entre pantalla 0 y 1 */ /* FUNCIONA */
+
+resolveIn(1000).then(delay => {
+    cambiarPantalla("fase0","fase1");
+})
 
 
 
