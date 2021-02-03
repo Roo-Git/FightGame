@@ -99,7 +99,7 @@ let inicioGame = () => {
 console.log("Iniciamos el juego y la vida del player 1 es..." + heroe1.vida);
 console.log("Iniciamos el juego y la vida del player 2 es..." + heroe2.vida);
 
-/* Función: Cambiar de Pantalla: */
+/* Función: Cambiar de Pantalla: */ /* FUNCIONA A MEDIAS? */
 
 let cambiarPantalla = (faseAhora, faseFutura) => {
     let pantallaActual = document.getElementById(faseAhora);
@@ -110,37 +110,48 @@ let cambiarPantalla = (faseAhora, faseFutura) => {
     // Procedemos al cambio del pantalla //
 
     pantallaActual.style.display = "none";
-    pantallaDestino.style.display = "block";
+    pantallaDestino.style.display = "block";        // OJO!!! .STYLE NO COGE LA PROPIEDAD ///
 
 };
 
+/* Traductor */ /* Funciona */
 
-/* Función: Selección de Personaje. */ /* REVISAR!!! NO FUNCIONA */
+let allheroes = {
+    "Cartman": heroe1,
+    "Stan": heroe2,
+    "Kyle": heroe3,
+    "Kenny": heroe4,
+    "Butters": heroe5,
+    "Jimmy": heroe6
+};
+
+
+/* Función: Selección de Personaje. */ /* FUNCIONA */
 
 let selectHero = (personaje) => {
     if(p1 == "") {
-        p1 = personaje;
+        p1 = allheroes[personaje];
 
         document.getElementById(personaje).className = "elegido";
         document.getElementById(personaje).onclick = "";
 
     }else {
-        p2 = personaje;
+        p2 = allheroes[personaje];
 
         document.getElementById(personaje).className = "elegido";
         document.getElementById(personaje).onclick = "";
     };
 
-    console.log(`El jugador uno ha escogido a ${p1}`)
-    console.log(`El jugador dos ha escogido a ${p2}`)
+    console.log(`El jugador uno ha escogido a: ${p1.nombre}`)
+    console.log(`El jugador dos ha escogido a: ${p2.nombre}`)
 
 
 
-    /* sub-Función: Mensaje de Selección de Personaje. */ /* REVISAR!!! NO FUNCIONA */
+    /* sub-Función: Mensaje de Selección de Personaje. */ /*FUNCIONA */
 
     let mensaje = document.getElementById("mensaje");
 
-    mensaje.innerHTML = `PLAYER ONE SELECT: ${p1} <br> <br> PLAYER TWO SELECT: ${p2}`;
+    mensaje.innerHTML = `PLAYER ONE SELECT: ${p1.nombre} <br> <br> PLAYER TWO SELECT: ${p2.nombre}`;
 
 
 };
