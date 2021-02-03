@@ -41,7 +41,7 @@
 
 .seleccionHeroes {
     width: 5em;
-    height: 20em;
+    height: 18em;
     margin: auto;
     margin-top: 2em;
     display: flex;
@@ -110,40 +110,32 @@
     filter: grayscale(100%);
 }
 
-
+.aside{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
 
 /* PANTALLA Nº 1  ASIDE - MENSAJE */
 
 #mensaje {
-    position: relative;
-    height: 150px;
-    width: 300px;
+    height: 120px;
+    width: 500px;
     background-color: wheat;
-    border-radius: 50%;
-    box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5);
     display: flex;
+    padding: 1em;
     justify-content: center;
     align-items: center;
     font-size: 1em;
     font-family: 'Potta One', cursive;
-    margin: auto;
 }
 
-#mensaje::before {
-    border: 25px solid wheat;
-    content: '';
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-    border-right-color: transparent;
-    position: absolute;
-    bottom: -40px;
-    right: 75px;
-    transform: rotate(-8deg);
+
+.containerRandy {
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 0.1em;
-    font-family: 'Potta One', cursive;
+    margin: 1em;
+    margin-right: 2em;
 }
 
 
