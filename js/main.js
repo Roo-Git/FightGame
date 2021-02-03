@@ -30,7 +30,7 @@ class Fighter {
 
 /* Las Propiedades son: nombre, vida, fuerza, defensa y suerte. */
 
-let heroe1 = new Fighter ("Cartman", 100, 10, 10, 10);
+let heroe1 = new Fighter ("CARTMAN", 100, 10, 10, 10);
 
 let heroe2 = new Fighter ("Stan", 100, 10, 10, 10);
 
@@ -125,7 +125,7 @@ let selectHero = (personaje) => {
 
     let mensaje = document.getElementById("mensaje");
 
-    mensaje.innerHTML = `Has escogido al primer personaje que es ${p1} y al segundo que es ${p2}`;
+    mensaje.innerHTML = `PLAYER ONE SELECT: ${p1} <br> <br> PLAYER TWO SELECT: ${p2}`;
 
 
 };

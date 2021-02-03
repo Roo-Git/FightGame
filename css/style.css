@@ -19,7 +19,7 @@
     text-align: center;
     align-items: center;
     width: 75%;
-    font-size: 6em;
+    font-size: 4em;
     font-family: 'Potta One', cursive;
     margin-left: 1em;
 }
@@ -131,7 +131,7 @@
 }
 
 
-.containerRandy {
+.containerRandy {   
     display: flex;
     justify-content: center;
     margin: 1em;
