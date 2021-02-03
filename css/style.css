@@ -8,7 +8,7 @@
 
 .header {
     width: 100%;
-    height: 10em;
+    height: 5em;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -19,7 +19,7 @@
     text-align: center;
     align-items: center;
     width: 75%;
-    font-size: 8em;
+    font-size: 6em;
     font-family: 'Potta One', cursive;
     margin-left: 1em;
 }
@@ -31,8 +31,8 @@
     align-items: center;
     background-image: url(/img/titulo.png);
     background-size: cover;
-    width: 8em;
-    height: 8em;
+    width: 4em;
+    height: 4em;
     margin-left: 4em;
 
 }
@@ -40,8 +40,8 @@
 /* PANTALLA Nº 1 Main = Seleccion Heroes  */
 
 .seleccionHeroes {
-    width: 10em;
-    height: 25em;
+    width: 5em;
+    height: 20em;
     margin: auto;
     margin-top: 2em;
     display: flex;
@@ -53,7 +53,7 @@
 .cartman, .stan, .kyle, .kenny, .butters, .jimmy{
     margin: 0.4em;
     width: 20em;
-    height: 20em;
+    height: 15em;
     text-align: center;
     border: black 0.5em solid;
     border-radius: 1em;
@@ -65,42 +65,42 @@
 .imgHeroe {
     padding: 2em;
     background-size: cover;
-    width: 12em;
+    width: 5em;
 }
 
 #Cartman {
-    width: 13.5em;
+    width: 5em;
     padding: 1.7em;
     margin-top: 1em;
 }
 
 
 #Stan {
-    width: 9.3em;
+    width: 5em;
     padding: 1.7em;
     margin-top: 1em;
 }
 
 #Kyle {
-    width: 18em;
+    width: 5em;
     padding: 1.7em;
     margin-top: 1em;
 }
 
 #Kenny {
-    width: 14em;
+    width: 5em;
     padding: 1.7em;
     margin-top: 1em;
 }
 
 #Butters {
-    width: 13em;
+    width: 5em;
     padding: 1.7em;
     margin-top: 1em;
 }
 
 #Jimmy {
-    width: 11em;
+    width: 5em;
     padding: 1.7em;
     margin-top: 1em;
 }
@@ -115,11 +115,35 @@
 /* PANTALLA Nº 1  ASIDE - MENSAJE */
 
 #mensaje {
-    margin: auto;
-    width: 98em;
-    height: 20em;
+    position: relative;
+    height: 150px;
+    width: 300px;
     background-color: wheat;
-    border-radius: 1em;
+    border-radius: 50%;
+    box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-family: 'Potta One', cursive;
+    margin: auto;
+}
+
+#mensaje::before {
+    border: 25px solid wheat;
+    content: '';
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    position: absolute;
+    bottom: -40px;
+    right: 75px;
+    transform: rotate(-8deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.1em;
+    font-family: 'Potta One', cursive;
 }
 
 

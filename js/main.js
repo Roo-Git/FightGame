@@ -100,7 +100,7 @@ console.log("Iniciamos el juego y la vida del player 1 es..." + heroe1.vida);
 console.log("Iniciamos el juego y la vida del player 2 es..." + heroe2.vida);
 
 
-/* Función: Selección de Personaje. */ /* FUNCIONA */
+/* Función: Selección de Personaje. */ /* REVISAR!!! NO FUNCIONA */
 
 let selectHero = (personaje) => {
     if(p1 == "") {
@@ -121,7 +121,7 @@ let selectHero = (personaje) => {
 
 
 
-    /* sub-Función: Mensaje de Selección de Personaje. */ /* FUNCIONA */
+    /* sub-Función: Mensaje de Selección de Personaje. */ /* REVISAR!!! NO FUNCIONA */
 
     let mensaje = document.getElementById("mensaje");
 
