@@ -1,15 +1,12 @@
 /* Google Font: Potta One -> https://fonts.google.com/specimen/Potta+One?sidebar.open=true&selection.family=Potta+One */
 
-
-
-/* PANTALLA Nº 1 ''SELECCION DE PERSONAJE'' */
-
-                                /* Header */
 .general{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* PANTALLA Nº 0 'IMAGEN INICIAL Y LOADING */
 
 .contenedorInicio {
     width: 100%;
@@ -29,6 +26,10 @@
     justify-content: center;
     align-items: center;
 }
+
+/* PANTALLA Nº 1 ''SELECCION DE PERSONAJE'' */
+
+                                /* Header */
 
 
 .header {
@@ -213,3 +214,4 @@
     </div>
 
 */
+

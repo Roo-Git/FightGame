@@ -140,7 +140,7 @@ let selectHero = (personaje) => {
 
         document.getElementById(personaje).className = "elegido";
         document.getElementById(personaje).onclick = "";
-    };
+    
 
     console.log(`El jugador uno ha escogido a: ${p1.nombre}`)
     console.log(`El jugador dos ha escogido a: ${p2.nombre}`)
@@ -152,8 +152,28 @@ let selectHero = (personaje) => {
     let mensaje = document.getElementById("mensaje");
 
     mensaje.innerHTML = `PLAYER ONE SELECT: ${p1.nombre} <br> <br> PLAYER TWO SELECT: ${p2.nombre}`;
+    
+        /* sub-Función: Cargo a los personajes en Fase 2 */
 
+        let showHeroe1 = document.getElementById("contricante1");
+        let showHeroe2 = document.getElementById("contricante2");
 
+        showHeroe1.innerHTML = `<div><img class="estiloContricante" src="img/${p1.nombre}.png"></div>`;
+        showHeroe2.innerHTML = `<div><img class="estiloContricante" src="img/${p2.nombre}.png"></div>`;
+
+        console.log(showHeroe1.innerHTML);
+
+        /* Asignar a los heroes... */
+
+        console.log(p1);
+        console.log(p2);
+
+        /* Cambiar de pantalla porque ya tenemos a los personajes elegidos */
+
+        resolveIn(1000).then (delay => {
+            cambiarPantalla("fase1", "fase2")
+        });
+    };    
 };
 
 /* PROMESA: Delay (Tiene que estar arriba de: FUNCION: Tiempo de Delay) FUNCIONA  */ 
