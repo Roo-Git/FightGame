@@ -163,7 +163,7 @@ new Promise (res => setTimeout(() => res(delay), delay));
 
 /* Funcion: Tiempo de Delay Entre pantalla 0 y 1 */ /* FUNCIONA */
 
-resolveIn(9000).then(delay => {
+resolveIn(2000).then(delay => {
     cambiarPantalla("fase0","fase1");   /* ID DIV MAESTRO DE CADA PANTALLA */
 })
 
