@@ -174,10 +174,10 @@ let atacar = () => {
     console.log ("Heroe escogido: " + p1.nombre + " ||| Vida Restante de:" + " " + p1.nombre + " " + heroe1.vida);
     console.log ("Heroe escogido: " + p2.nombre + " ||| Vida Restante de:" + " " + p2.nombre + " " + heroe2.vida);
     
-    /* Sub-Funcion: VIDA DE LOS HEROES */
+    /* Sub-Funcion: VIDA DE LOS HEROES  TESTING*/
 
-    let vida1 = document.getElementById("vidaP1");
-    let vida2 = document.getElementById("vidaP2");
+    let vida1 = document.getElementById("vidaP1");  /* TENGO QUE CREAR UN ID DE  vidaP1 */
+    let vida2 = document.getElementById("vidaP2");  /* TENGO QUE CREAR UN ID DE ganador vidaP2 */
     let mostrarGanador = document.getElementById("ganador"); /* TENGO QUE CREAR UN ID DE ganador */
     let mostrarNombreGanador = document.getElementById("nombreGanador"); /* TENGO QUE CREAR UN ID DE nombreGanador */
 
@@ -187,7 +187,7 @@ let atacar = () => {
         mostrarNombreGanador.innerHTML = `${p2.nombre} WINS THE GAME`
 
         /* Pasamos a la última pantalla si ha ganado el PLAYER 2 */
-        resolveIn(1000).then(delay => {     
+        resolveIn(3000).then(delay => {     
             cambiarPantalla("fase2","fase3");
         });
 
@@ -201,19 +201,23 @@ let atacar = () => {
         mostrarNombreGanador.innerHTML = `${p1.nombre} WINS THE GAME`
 
         /* Pasamos a la última pantalla si ha ganado el PLAYER 1 */
-        resolveIn(1000).then(delay => {     
+        resolveIn(3000).then(delay => {     
             cambiarPantalla("fase2","fase3");
         });
         
         /* Volvemos a iniciar el juego */
-        resolveIn(1000).then(delay => {         
-            cambiarPantalla("fase3","fase0");
+        resolveIn(4000).then(delay => {         
+            cambiarPantalla("fase3","fase0");       /* PROBLEMA AL VOLVER A INICIAR EL JUEGO */
         });
     }else{
-        vida1.innerHTML = Math.floor(`${p1.vida}`);     /* NO ENTIENDO ESTE INNERHTML, NI EL NUMERO RANDOM */
-        vida2.innerHTML = Math.floor(`${p2.vida}`);
+        vida1.innerHTML = Math.floor(`${p1.vida * 1}`);     /* NO ENTIENDO ESTE INNERHTML, NI EL NUMERO RANDOM */
+        vida2.innerHTML = Math.floor(`${p2.vida * 1}`);
     };
 };
+
+
+
+
 
 /* PROMESA: Delay (Tiene que estar arriba de: FUNCION: Tiempo de Delay) FUNCIONA  */ 
 
@@ -252,54 +256,5 @@ resolveIn(1000).then(delay => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-/*let arrayTeamA = [];
-
-let arrayTeamB = [];
-
-let selectHeroe = (figther) => {
-    if(arrayTeamA.length < 3) {
-        // Introducimos Heroe en el array A //
-        arrayTeamA.push(figther);
-        // getElementByID //
-        document.getElementById(figther).className = "Elegido";
-        document.getElementById(figther).onclick = "";
-
-        if(arrayTeamA.length == 3) {
-            // Cambio color de fondo //
-            for(let i = 0; i < arrayTeamA.length; i++) {
-                document.getElementById(arrayTeamA[i]).style = "background-color : red";
-            }
-    } 
-        
-    }else if(arrayTeamB.length < 3) {
-        // Introducimos Heroe en el array B //
-        arrayTeamB.push(figther);
-        document.getElementById(figther).className = "Elegido";
-        document.getElementById(figther).onclick = "";
-    };
-    
-    console.log("EL EQUIPO A: ", arrayTeamA);
-    console.log("EL EQUIPO B: ", arrayTeamB);
-} */
-
-
-/* PARA OCULTAR PERSONAJES
-
-    if(arrayTeamA.length == 3) {
-            // Eliminamos a los personajes ya escogidos //
-            for(let i = 0; i < arrayTeamA.length; i++) {
-                document.getElementById(arrayTeamA[i]).style = "visibility : hidden";
-            }
-    } */
 
 

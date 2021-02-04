@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">     
 </head>
 <body>
+
     <div class="master"> <!-- Div padre del proyecto -->
 
         <!-- Pantalla Nº 0: Contiene Imagen de Inicio y LOADING -->
@@ -69,13 +70,13 @@
                 <div id="contricante2"></div>
             </div>
 
-            <!-- MAIN Pantalla Nº 2: Aparecen el boton de ataque e interactua con el usuario // PROCESO // -->
+            <!-- MAIN Pantalla Nº 2: Aparecen el boton de ataque e interactua con el usuario -->
 
             <div class="botonPegar">
                 <div id="strike" class="attack" onclick="atacar()"><img id="strike" class="attack" src="/img/ataque.png" alt=""></div> 
             </div>
 
-            <!-- ASIDE Pantalla Nº 2: Contiene La imagen del narrador y el mensaje de texto de JS sobre el combate // PROCESO // -->
+            <!-- ASIDE Pantalla Nº 2: Contiene La imagen del narrador y el mensaje de texto de JS sobre el combate -->
             
             <div class="aside">
                 <div class="containerRandy">
@@ -83,7 +84,14 @@
                 </div> 
                 <div id="infoVs"></div>
             </div>
+        </div>
 
+        <div id="fase3" class="pantalla3" style="display: none">
+            <div id="nombreGanador"></div>
+            <div id="ganador"></div>
+            <div id="vida1"></div>
+            <div id="vida2"></div>
+            <div id="ganadorPantallaFinal"></div>
         </div>
             
     </div>    

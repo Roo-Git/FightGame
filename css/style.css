@@ -223,6 +223,22 @@
 }
 
 
+/* PANTALLA Nº 3 - FINAL */
+
+#nombreGanador {
+    font-size: 4em;
+    font-family: 'Potta One', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ganador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
