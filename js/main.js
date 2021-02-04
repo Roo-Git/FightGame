@@ -99,18 +99,18 @@ let inicioGame = () => {
 console.log("Iniciamos el juego y la vida del player 1 es..." + heroe1.vida);
 console.log("Iniciamos el juego y la vida del player 2 es..." + heroe2.vida);
 
-/* Función: Cambiar de Pantalla: */ /* FUNCIONA A MEDIAS? */
+/* Función: Cambiar de Pantalla: */ /* FUNCIONA */
 
 let cambiarPantalla = (faseAhora, faseFutura) => {
     let pantallaActual = document.getElementById(faseAhora);
-    pantallaDestino = document.getElementById(faseFutura);
+    let pantallaDestino = document.getElementById(faseFutura);
 
    
 
-    // Procedemos al cambio del pantalla //
+    // Procedemos al cambio del pantalla // */ FUNCIONA */
 
     pantallaActual.style.display = "none";
-    pantallaDestino.style.display = "block";        // OJO!!! .STYLE NO COGE LA PROPIEDAD ///
+    pantallaDestino.style.display = "block";        
 
 };
 
@@ -183,7 +183,7 @@ new Promise (res => setTimeout(() => res(delay), delay));
 
 /* Funcion: Tiempo de Delay Entre pantalla 0 y 1 */ /* FUNCIONA */
 
-resolveIn(2000).then(delay => {
+resolveIn(1000).then(delay => {
     cambiarPantalla("fase0","fase1");   /* ID DIV MAESTRO DE CADA PANTALLA */
 })
 

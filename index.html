@@ -42,7 +42,7 @@
                 <div onclick= "selectHero('Jimmy')" class="jimmy"><img class="imgHeroe" id="Jimmy" src="img/jimmy.png">JIMMY</div>
             </div>
 
-            <!-- ASIDE Pantalla Nº 1: Contiene La imagen del narrador y el mensaje de texto de JS -->
+            <!-- ASIDE Pantalla Nº 1: Contiene La imagen del narrador y el mensaje de texto de seleccion de personaje -->
 
             <div class="aside">
                 <div class="containerRandy">
@@ -52,17 +52,40 @@
             </div>
         </div>
 
-        <!-- Pantalla Nº 2: APARECEN LOS HEROES + BOTON DE ATAQUE //EN PROCESO// -->
-        <div id="fase2" class="pantalla2" style="display: none"></div>
+        <!-- Pantalla Nº 2: APARECEN LOS HEROES + BOTON DE ATAQUE + NARRADOR -->
+        <div id="fase2" class="pantalla2" style="display: none">
+
+            <!-- HEADER Pantalla Nº 2: Contiene el título y el icono de South Park -->
+
+            <div class="header">
+                <div class="titulo" class="titulo2">Fight!</div>
+                <img class="iconoSouthPark" src="img/titulo.png" alt="Título">
+            </div>
+
+            <!-- MAIN Pantalla Nº 2: Aparecen los luchadores seleccionados -->
 
             <div class="luchadoresCombate">
                 <div id="contricante1"></div>
                 <div id="contricante2"></div>
             </div>
 
+            <!-- MAIN Pantalla Nº 2: Aparecen el boton de ataque e interactua con el usuario // PROCESO // -->
+
             <div class="botonPegar">
-                <div id="strike" class="attack" onclick="atacar()"></div>
+                <div id="strike" class="attack" onclick="atacar()"><img id="strike" class="attack" src="/img/ataque.png" alt=""></div> 
             </div>
+
+            <!-- ASIDE Pantalla Nº 2: Contiene La imagen del narrador y el mensaje de texto de JS sobre el combate // PROCESO // -->
+            
+            <div class="aside">
+                <div class="containerRandy">
+                    <img class="randy" id="Randy" src="img/randy.png">
+                </div> 
+                <div id="mensaje"></div>
+            </div>
+
+        </div>
+            
     </div>    
 
 
