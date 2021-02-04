@@ -208,7 +208,19 @@
 }
 
 
-
+#infoVs {
+    height: 120px;
+    width: 500px;
+    background-color: wheat;
+    border-radius: 1em;
+    border: black 0.3em solid;
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-family: 'Potta One', cursive;
+}
 
 
 

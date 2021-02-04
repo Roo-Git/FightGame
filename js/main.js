@@ -30,17 +30,17 @@ class Fighter {
 
 /* Las Propiedades son: nombre, vida, fuerza, defensa y suerte. */
 
-let heroe1 = new Fighter ("CARTMAN", 100, 10, 10, 10);
+let heroe1 = new Fighter ("CARTMAN", 100, 60, 0, 0);
 
-let heroe2 = new Fighter ("Stan", 100, 10, 10, 10);
+let heroe2 = new Fighter ("Stan", 100, 50, 0, 0);
 
-let heroe3 = new Fighter ("Kyle", 100, 10, 10, 10);
+let heroe3 = new Fighter ("Kyle", 100, 40, 0, 0);
 
-let heroe4 = new Fighter ("Kenny", 100, 10, 10, 10);
+let heroe4 = new Fighter ("Kenny", 100, 30, 0, 0);
 
-let heroe5 = new Fighter ("Butters", 100, 10, 10, 10);
+let heroe5 = new Fighter ("Butters", 100, 90, 0, 0);
 
-let heroe6 = new Fighter ("Jimmy", 100, 10, 10, 10);
+let heroe6 = new Fighter ("Jimmy", 100, 80, 0, 0);
 
 let p1 = "";
 
@@ -49,6 +49,16 @@ let p2 = "";
 
 /*console.log(heroe2.vida)*/
 
+/* Traductor */ /* Funciona */
+
+let allheroes = {
+    "Cartman": heroe1,
+    "Stan": heroe2,
+    "Kyle": heroe3,
+    "Kenny": heroe4,
+    "Butters": heroe5,
+    "Jimmy": heroe6
+};
 
 
 /* Funciones */
@@ -83,18 +93,6 @@ let cambiarPantalla = (faseAhora, faseFutura) => {
     pantallaDestino.style.display = "block";        
 
 };
-
-/* Traductor */ /* Funciona */
-
-let allheroes = {
-    "Cartman": heroe1,
-    "Stan": heroe2,
-    "Kyle": heroe3,
-    "Kenny": heroe4,
-    "Butters": heroe5,
-    "Jimmy": heroe6
-};
-
 
 /* Función: Selección de Personaje. */ /* FUNCIONA */
 
@@ -146,35 +144,76 @@ let selectHero = (personaje) => {
     };    
 };
 
-/* Función: Atacar */
+/* Función: Atacar */ /* Funciona */
 
 let atacar = () => {
     let turno = Math.floor(Math.random() * 2);
     let especial = Math.floor(Math.random() * 5);
-
-    console.log(atacar);
+    let info = document.getElementById("infoVs");
 
     if(turno == 0) {
         if (especial == 3) {
             console.log("ATAQUE ESPECIAL");
-            heroe1.ataqueEspecial(heroe2);
+            p1.ataqueEspecial(p2);
+            info.innerHTML = `${p1.nombre} SUPER ATTACK`
         }else {
-
-            heroe1.ataque(heroe2);
+            info.innerHTML = `${p1.nombre} NORMAL ATTACK`
+            p1.ataque(p2);
         }
     }else{
         if (especial == 3) {
             console.log ("ATAQUE ESPECIAL");
-            heroe2.ataqueEspecial(heroe1);
+            p2.ataqueEspecial(p1);
+            info.innerHTML = `${p2.nombre} SUPER ATTACK`
         }else{
-            heroe2.ataque(heroe1);
+            info.innerHTML = `${p2.nombre} NORMAL ATTACK`
+            p2.ataque(p1);
         }
     };
 
-    console.log ("Heroe escogido: " + heroe1.nombre + " ||| Vida Restante: " + heroe1.vida);
-    console.log ("Heroe escogido: " + heroe2.nombre + " ||| Vida Restante: " + heroe2.vida);
+    console.log ("Heroe escogido: " + p1.nombre + " ||| Vida Restante de:" + " " + p1.nombre + " " + heroe1.vida);
+    console.log ("Heroe escogido: " + p2.nombre + " ||| Vida Restante de:" + " " + p2.nombre + " " + heroe2.vida);
     
-}
+    /* Sub-Funcion: VIDA DE LOS HEROES */
+
+    let vida1 = document.getElementById("vidaP1");
+    let vida2 = document.getElementById("vidaP2");
+    let mostrarGanador = document.getElementById("ganador"); /* TENGO QUE CREAR UN ID DE ganador */
+    let mostrarNombreGanador = document.getElementById("nombreGanador"); /* TENGO QUE CREAR UN ID DE nombreGanador */
+
+    if(p1.vida <= 0) {
+        console.log("PLAYER 2 WINS");
+        mostrarGanador.innerHTML = `<img id="ganadorPantallaFinal" src="img/${p2.nombre}.png">`; /* TENGO QUE CREAR UN ID DE ganadorPantallaFinal */
+        mostrarNombreGanador.innerHTML = `${p2.nombre} WINS THE GAME`
+
+        /* Pasamos a la última pantalla si ha ganado el PLAYER 2 */
+        resolveIn(1000).then(delay => {     
+            cambiarPantalla("fase2","fase3");
+        });
+
+        /* Volvemos a iniciar el juego */
+        resolveIn(1000).then(delay => {         
+            cambiarPantalla("fase3","fase0");
+        });
+    }else if(p2.vida <= 0) {
+        console.log("PLAYER 1 WINS");
+        mostrarGanador.innerHTML = `<img id="ganadorPantallaFinal" src="img/${p1.nombre}.png">`; /* TENGO QUE CREAR UN ID DE ganadorPantallaFinal */
+        mostrarNombreGanador.innerHTML = `${p1.nombre} WINS THE GAME`
+
+        /* Pasamos a la última pantalla si ha ganado el PLAYER 1 */
+        resolveIn(1000).then(delay => {     
+            cambiarPantalla("fase2","fase3");
+        });
+        
+        /* Volvemos a iniciar el juego */
+        resolveIn(1000).then(delay => {         
+            cambiarPantalla("fase3","fase0");
+        });
+    }else{
+        vida1.innerHTML = Math.floor(`${p1.vida}`);     /* NO ENTIENDO ESTE INNERHTML, NI EL NUMERO RANDOM */
+        vida2.innerHTML = Math.floor(`${p2.vida}`);
+    };
+};
 
 /* PROMESA: Delay (Tiene que estar arriba de: FUNCION: Tiempo de Delay) FUNCIONA  */ 
 
