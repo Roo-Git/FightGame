@@ -53,36 +53,6 @@ let p2 = "";
 
 /* Funciones */
 
-    /* Función: Atacar */
-
-/*let atacar = () => {
-    let turno = Math.floor(Math.random() * 2);
-    let especial = Math.floor(Math.random() * 5);
-
-    console.log(atacar);
-
-    if(turno == 0) {
-        if (especial == 3) {
-            console.log("ATAQUE ESPECIAL");
-            heroe1.ataqueEspecial(heroe2);
-        }else {
-
-            heroe1.ataque(heroe2);
-        }
-    }else{
-        if (especial == 3) {
-            console.log ("ATAQUE ESPECIAL");
-            heroe2.ataqueEspecial(heroe1);
-        }else{
-            heroe2.ataque(heroe1);
-        }
-    };
-
-    console.log ("Heroe escogido: " + heroe1.nombre + " ||| Vida Restante: " + heroe1.vida);
-    console.log ("Heroe escogido: " + heroe2.nombre + " ||| Vida Restante: " + heroe2.vida);
-    
-};
-
 /* Función: Inicio GameFigth. */ /* FUNCIONA */
 
 let inicioGame = () => {
@@ -175,6 +145,36 @@ let selectHero = (personaje) => {
         });
     };    
 };
+
+/* Función: Atacar */
+
+let atacar = () => {
+    let turno = Math.floor(Math.random() * 2);
+    let especial = Math.floor(Math.random() * 5);
+
+    console.log(atacar);
+
+    if(turno == 0) {
+        if (especial == 3) {
+            console.log("ATAQUE ESPECIAL");
+            heroe1.ataqueEspecial(heroe2);
+        }else {
+
+            heroe1.ataque(heroe2);
+        }
+    }else{
+        if (especial == 3) {
+            console.log ("ATAQUE ESPECIAL");
+            heroe2.ataqueEspecial(heroe1);
+        }else{
+            heroe2.ataque(heroe1);
+        }
+    };
+
+    console.log ("Heroe escogido: " + heroe1.nombre + " ||| Vida Restante: " + heroe1.vida);
+    console.log ("Heroe escogido: " + heroe2.nombre + " ||| Vida Restante: " + heroe2.vida);
+    
+}
 
 /* PROMESA: Delay (Tiene que estar arriba de: FUNCION: Tiempo de Delay) FUNCIONA  */ 
 

@@ -167,6 +167,9 @@
     margin-right: 2em;
 }
 
+
+/* PANTALLA Nº 2: MAIN - APARECEN PERSONAJES + BOTON DE LUCHA */
+
 .luchar {
     display:flex;
     justify-content: center;
