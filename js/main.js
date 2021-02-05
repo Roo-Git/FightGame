@@ -68,8 +68,8 @@ let allheroes = {
 let inicioGame = () => {
     let vidaInicial = 100;
 
-    heroe1.vida = vidaInicial;
-    heroe2.vida = vidaInicial;
+    p1.vida = vidaInicial;
+    p2.vida = vidaInicial;
 
     p1 = "";
     p2 = "";
@@ -210,8 +210,8 @@ let atacar = () => {
             cambiarPantalla("fase3","fase0");       /* PROBLEMA AL VOLVER A INICIAR EL JUEGO */
         });
     }else{
-        vida1.innerHTML = Math.floor(`${p1.vida * 1}`);     /* NO ENTIENDO ESTE INNERHTML, NI EL NUMERO RANDOM */
-        vida2.innerHTML = Math.floor(`${p2.vida * 1}`);
+        vida1.innerHTML = Math.floor(`${p1.vida}`);     /* NO ENTIENDO ESTE INNERHTML, NI EL NUMERO RANDOM */
+        vida2.innerHTML = Math.floor(`${p2.vida}`);
     };
 };
 
