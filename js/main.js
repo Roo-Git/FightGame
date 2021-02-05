@@ -174,10 +174,7 @@ let atacar = () => {
     console.log ("Heroe escogido: " + p1.nombre + " ||| Vida Restante de:" + " " + p1.nombre + " " + heroe1.vida);
     console.log ("Heroe escogido: " + p2.nombre + " ||| Vida Restante de:" + " " + p2.nombre + " " + heroe2.vida);
     
-    /* Sub-Funcion: VIDA DE LOS HEROES  TESTING*/
-
-    let vida1 = document.getElementById("vidaP1");  /* TENGO QUE CREAR UN ID DE  vidaP1 */
-    let vida2 = document.getElementById("vidaP2");  /* TENGO QUE CREAR UN ID DE ganador vidaP2 */
+    /* Sub-Funcion: Mostrar ganador*/
     let mostrarGanador = document.getElementById("ganador"); /* TENGO QUE CREAR UN ID DE ganador */
     let mostrarNombreGanador = document.getElementById("nombreGanador"); /* TENGO QUE CREAR UN ID DE nombreGanador */
 
@@ -187,31 +184,19 @@ let atacar = () => {
         mostrarNombreGanador.innerHTML = `${p2.nombre} WINS THE GAME`
 
         /* Pasamos a la última pantalla si ha ganado el PLAYER 2 */
-        resolveIn(3000).then(delay => {     
+        resolveIn(2000).then(delay => {     
             cambiarPantalla("fase2","fase3");
         });
 
-        /* Volvemos a iniciar el juego */
-        resolveIn(1000).then(delay => {         
-            cambiarPantalla("fase3","fase0");
-        });
     }else if(p2.vida <= 0) {
         console.log("PLAYER 1 WINS");
         mostrarGanador.innerHTML = `<img id="ganadorPantallaFinal" src="img/${p1.nombre}.png">`; /* TENGO QUE CREAR UN ID DE ganadorPantallaFinal */
         mostrarNombreGanador.innerHTML = `${p1.nombre} WINS THE GAME`
 
         /* Pasamos a la última pantalla si ha ganado el PLAYER 1 */
-        resolveIn(3000).then(delay => {     
+        resolveIn(2000).then(delay => {     
             cambiarPantalla("fase2","fase3");
         });
-        
-        /* Volvemos a iniciar el juego */
-        resolveIn(4000).then(delay => {         
-            cambiarPantalla("fase3","fase0");       /* PROBLEMA AL VOLVER A INICIAR EL JUEGO */
-        });
-    }else{
-        vida1.innerHTML = Math.floor(`${p1.vida}`);     /* NO ENTIENDO ESTE INNERHTML, NI EL NUMERO RANDOM */
-        vida2.innerHTML = Math.floor(`${p2.vida}`);
     };
 };
 

@@ -231,6 +231,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1em;
 }
 
 #ganador {
@@ -238,6 +239,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 2em;
 }
 
 
+.f5 {
+    font-size: 4em;
+    font-family: 'Potta One', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
