@@ -254,7 +254,5 @@
 
 
 .estiloContrincante {
-    background-color: red;
-    width: 20em;
-    height: 20em;
+    background-image: cover;
 }

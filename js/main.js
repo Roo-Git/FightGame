@@ -43,17 +43,17 @@ class Fighter {
 
 /* Las Propiedades son: nombre, vida, fuerza, defensa y suerte. */
 
-let heroe1 = new Fighter ("CARTMAN", 300, 10, 0, 0);
+let heroe1 = new Fighter ("cartman", 300, 10, 0, 0);
 
-let heroe2 = new Fighter ("Stan", 300, 10, 0, 0);
+let heroe2 = new Fighter ("stan", 300, 10, 0, 0);
 
-let heroe3 = new Fighter ("Kyle", 300, 10, 0, 0);
+let heroe3 = new Fighter ("kyle", 300, 10, 0, 0);
 
-let heroe4 = new Fighter ("Kenny", 300, 10, 0, 0);
+let heroe4 = new Fighter ("kenny", 300, 10, 0, 0);
 
-let heroe5 = new Fighter ("Butters", 300, 10, 0, 0);
+let heroe5 = new Fighter ("butters", 300, 10, 0, 0);
 
-let heroe6 = new Fighter ("Jimmy", 300, 10, 0, 0);
+let heroe6 = new Fighter ("jimmy", 300, 10, 0, 0);
 
 let p1 = "";
 
@@ -65,12 +65,12 @@ let p2 = "";
 /* Traductor */ /* Funciona */
 
 let allheroes = {
-    "Cartman": heroe1,
-    "Stan": heroe2,
-    "Kyle": heroe3,
-    "Kenny": heroe4,
-    "Butters": heroe5,
-    "Jimmy": heroe6
+    "cartman": heroe1,
+    "stan": heroe2,
+    "kyle": heroe3,
+    "kenny": heroe4,
+    "butters": heroe5,
+    "jimmy": heroe6
 };
 
 
