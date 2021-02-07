@@ -171,16 +171,16 @@ let atacar = () => {
             p1.ataqueEspecial(p2);
             info.innerHTML = `${p1.nombre} makes a SUPER Attack to ` + `${p2.nombre}.<br><br>` + `${p2.nombre}'s life is now: ` + `${p2.vida}`
         }else {
-            info.innerHTML = `${p1.nombre} makes a NORMAL Attack to` + `${p2.nombre}.<br><br>` + `${p2.nombre}'s life is now: ` + `${p2.vida}`
+            info.innerHTML = `${p1.nombre} makes a NORMAL Attack to ` + `${p2.nombre}.<br><br>` + `${p2.nombre}'s life is now: ` + `${p2.vida}`
             p1.ataque(p2);
         }
     }else{
         if (especial == 3) {
             console.log ("ATAQUE ESPECIAL");
             p2.ataqueEspecial(p1);
-            info.innerHTML = `${p2.nombre} makes a SUPER Attack with ` + `${p1.nombre}.<br><br>` + `${p1.nombre}'s life is now: ` + `${p1.vida}`
+            info.innerHTML = `${p2.nombre} makes a SUPER Attack to ` + `${p1.nombre}.<br><br>` + `${p1.nombre}'s life is now: ` + `${p1.vida}`
         }else{
-            info.innerHTML = `${p2.nombre} makes a SUPER Attack with ` + `${p1.nombre}.<br><br>` + `${p1.nombre}'s life is now: ` + `${p1.vida}`
+            info.innerHTML = `${p2.nombre} makes a SUPER Attack to ` + `${p1.nombre}.<br><br>` + `${p1.nombre}'s life is now: ` + `${p1.vida}`
             p2.ataque(p1);
         }
     };
