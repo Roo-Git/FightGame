@@ -30,7 +30,7 @@ class Fighter {
     /* Métodos */
 
     ataque (enemigo) {
-        enemigo.vida -= (this.fuerza - enemigo.defensa) * (this.suerte - this.handicap);
+        enemigo.vida -= (this.fuerza - this.defensa) * (this.suerte - this.handicap);
     };
 
     ataqueEspecial (enemigo) {
@@ -43,17 +43,17 @@ class Fighter {
 
 /* Las Propiedades son: nombre, vida, fuerza, defensa y suerte. */
 
-let heroe1 = new Fighter ("cartman", 300, 10, 0, 0);
+let heroe1 = new Fighter ("cartman", 200, 30, 5, 1);
 
-let heroe2 = new Fighter ("stan", 300, 10, 0, 0);
+let heroe2 = new Fighter ("stan", 200, 30, 5, 4);
 
-let heroe3 = new Fighter ("kyle", 300, 10, 0, 0);
+let heroe3 = new Fighter ("kyle", 200, 20, 5, 2);
 
-let heroe4 = new Fighter ("kenny", 300, 10, 0, 0);
+let heroe4 = new Fighter ("kenny", 200, 30, 5, 5);
 
-let heroe5 = new Fighter ("butters", 300, 10, 0, 0);
+let heroe5 = new Fighter ("butters", 200, 20, 5, 3);
 
-let heroe6 = new Fighter ("jimmy", 300, 10, 0, 0);
+let heroe6 = new Fighter ("jimmy", 200, 20, 5, 2);
 
 let p1 = "";
 
@@ -79,7 +79,7 @@ let allheroes = {
 /* Función: Inicio GameFigth. */ /* FUNCIONA */
 
 let inicioGame = () => {
-    let vidaInicial = 100;
+    let vidaInicial = 200;
 
     p1.vida = vidaInicial;
     p2.vida = vidaInicial;
@@ -152,7 +152,7 @@ let selectHero = (personaje) => {
 
         /* Cambiar de pantalla porque ya tenemos a los personajes elegidos */
 
-        resolveIn(1000).then (delay => {
+        resolveIn(500).then (delay => {
             cambiarPantalla("fase1", "fase2")
         });
     };    
@@ -169,18 +169,18 @@ let atacar = () => {
         if (especial == 3) {
             console.log("ATAQUE ESPECIAL");
             p1.ataqueEspecial(p2);
-            info.innerHTML = `${p1.nombre} SUPER ATTACK`
+            info.innerHTML = `${p1.nombre} makes a SUPER Attack to ` + `${p2.nombre}.<br><br>` + `${p2.nombre}'s life is now: ` + `${p2.vida}`
         }else {
-            info.innerHTML = `${p1.nombre} NORMAL ATTACK`
+            info.innerHTML = `${p1.nombre} makes a NORMAL Attack to` + `${p2.nombre}.<br><br>` + `${p2.nombre}'s life is now: ` + `${p2.vida}`
             p1.ataque(p2);
         }
     }else{
         if (especial == 3) {
             console.log ("ATAQUE ESPECIAL");
             p2.ataqueEspecial(p1);
-            info.innerHTML = `${p2.nombre} SUPER ATTACK`
+            info.innerHTML = `${p2.nombre} makes a SUPER Attack with ` + `${p1.nombre}.<br><br>` + `${p1.nombre}'s life is now: ` + `${p1.vida}`
         }else{
-            info.innerHTML = `${p2.nombre} NORMAL ATTACK`
+            info.innerHTML = `${p2.nombre} makes a SUPER Attack with ` + `${p1.nombre}.<br><br>` + `${p1.nombre}'s life is now: ` + `${p1.vida}`
             p2.ataque(p1);
         }
     };
