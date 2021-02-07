@@ -25,6 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 /* PANTALLA Nº 1 ''SELECCION DE PERSONAJE'' */
