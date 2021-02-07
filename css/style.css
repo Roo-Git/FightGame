@@ -251,3 +251,10 @@
     align-items: center;
     margin-top: 1em;
 }
+
+
+.estiloContrincante {
+    background-color: red;
+    width: 20em;
+    height: 20em;
+}

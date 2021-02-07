@@ -140,8 +140,8 @@ let selectHero = (personaje) => {
         let showHeroe1 = document.getElementById("contricante1");
         let showHeroe2 = document.getElementById("contricante2");
 
-        showHeroe1.innerHTML = `<div><img class="estiloContricante" src="img/${p1.nombre}.png"></div>`;
-        showHeroe2.innerHTML = `<div><img class="estiloContricante" src="img/${p2.nombre}.png"></div>`;
+        showHeroe1.innerHTML = `<div><img class="estiloContrincante" src="img/${p1.nombre}.png"></div>`;
+        showHeroe2.innerHTML = `<div><img class="estiloContrincante" src="img/${p2.nombre}.png"></div>`;
 
         console.log(showHeroe1.innerHTML);
 
