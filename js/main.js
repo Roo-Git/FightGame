@@ -1,4 +1,16 @@
 
+/* PROMESA: Delay (Tiene que estar arriba de: FUNCION: Tiempo de Delay) FUNCIONA  */ 
+
+const resolveIn = delay =>
+new Promise (res => setTimeout(() => res(delay), delay));
+
+/* Funcion: Tiempo de Delay Entre pantalla 0 y 1 */ /* FUNCIONA */
+
+resolveIn(1000).then(delay => {
+    cambiarPantalla("fase0","fase1");   /* ID DIV MAESTRO DE CADA PANTALLA */
+})
+
+
 /* Clases */
 
 class Fighter {
@@ -30,17 +42,17 @@ class Fighter {
 
 /* Las Propiedades son: nombre, vida, fuerza, defensa y suerte. */
 
-let heroe1 = new Fighter ("CARTMAN", 100, 60, 0, 0);
+let heroe1 = new Fighter ("CARTMAN", 300, 10, 0, 0);
 
-let heroe2 = new Fighter ("Stan", 100, 50, 0, 0);
+let heroe2 = new Fighter ("Stan", 300, 10, 0, 0);
 
-let heroe3 = new Fighter ("Kyle", 100, 40, 0, 0);
+let heroe3 = new Fighter ("Kyle", 300, 10, 0, 0);
 
-let heroe4 = new Fighter ("Kenny", 100, 30, 0, 0);
+let heroe4 = new Fighter ("Kenny", 300, 10, 0, 0);
 
-let heroe5 = new Fighter ("Butters", 100, 90, 0, 0);
+let heroe5 = new Fighter ("Butters", 300, 10, 0, 0);
 
-let heroe6 = new Fighter ("Jimmy", 100, 80, 0, 0);
+let heroe6 = new Fighter ("Jimmy", 300, 10, 0, 0);
 
 let p1 = "";
 
@@ -74,10 +86,11 @@ let inicioGame = () => {
     p1 = "";
     p2 = "";
 
-};
 
+};
 console.log("Iniciamos el juego y la vida del player 1 es..." + heroe1.vida);
 console.log("Iniciamos el juego y la vida del player 2 es..." + heroe2.vida);
+
 
 /* Función: Cambiar de Pantalla: */ /* FUNCIONA */
 
@@ -171,8 +184,8 @@ let atacar = () => {
         }
     };
 
-    console.log ("Heroe escogido: " + p1.nombre + " ||| Vida Restante de:" + " " + p1.nombre + " " + heroe1.vida);
-    console.log ("Heroe escogido: " + p2.nombre + " ||| Vida Restante de:" + " " + p2.nombre + " " + heroe2.vida);
+    console.log ("Heroe escogido: " + p1.nombre + " ||| Vida Restante de:" + " " + p1.nombre + " " + p1.vida);
+    console.log ("Heroe escogido: " + p2.nombre + " ||| Vida Restante de:" + " " + p2.nombre + " " + p2.vida);
     
     /* Sub-Funcion: Mostrar ganador*/
     let mostrarGanador = document.getElementById("ganador"); /* TENGO QUE CREAR UN ID DE ganador */
@@ -201,19 +214,6 @@ let atacar = () => {
 };
 
 
-
-
-
-/* PROMESA: Delay (Tiene que estar arriba de: FUNCION: Tiempo de Delay) FUNCIONA  */ 
-
-const resolveIn = delay =>
-new Promise (res => setTimeout(() => res(delay), delay));
-
-/* Funcion: Tiempo de Delay Entre pantalla 0 y 1 */ /* FUNCIONA */
-
-resolveIn(1000).then(delay => {
-    cambiarPantalla("fase0","fase1");   /* ID DIV MAESTRO DE CADA PANTALLA */
-})
 
 
 
