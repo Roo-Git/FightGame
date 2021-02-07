@@ -25,7 +25,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 
 /* PANTALLA Nº 1 ''SELECCION DE PERSONAJE'' */
@@ -49,7 +48,7 @@
     width: 75%;
     font-size: 4em;
     font-family: 'Potta One', cursive;
-    margin-top: 4em;
+    margin-left: 2em;
 }
 
 .iconoSouthPark {
